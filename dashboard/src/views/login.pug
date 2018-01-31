@@ -1,0 +1,119 @@
+doctype html
+html(lang='en')
+    // begin::Head
+    head
+        meta(charset='utf-8')
+        title
+            | E-USO Login System
+        meta(name='description', content='E-USO login system')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        // begin::Web font
+        script(src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js')
+        script.
+            WebFont.load({
+                google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
+                active: function() {
+                    sessionStorage.fonts = true;
+                }
+            });
+        // end::Web font
+        // begin::Base Styles
+        link(href='/assets/css/vendors.bundle.css', rel='stylesheet', type='text/css')
+        link(href='/assets/css/style.bundle.css', rel='stylesheet', type='text/css')
+        link(href='/assets/css/style.css', rel='stylesheet', type='text/css')
+        // end::Base Styles
+        link(rel='shortcut icon', href='../../../assets/demo/default/media/img/logo/favicon.ico')
+    // end::Head
+    // end::Body
+    body.m--skin-.m-header--fixed.m-header--fixed-mobile.m-aside-left--enabled.m-aside-left--skin-dark.m-aside-left--offcanvas.m-footer--push.m-aside--offcanvas-default
+        // begin:: Page
+        .m-grid.m-grid--hor.m-grid--root.m-page
+            #m_login.m-grid__item.m-grid__item--fluid.m-grid.m-grid--ver-desktop.m-grid--desktop.m-grid--tablet-and-mobile.m-grid--hor-tablet-and-mobile.m-login.m-login--1.m-login--signin
+                .m-grid__item.m-grid__item--order-tablet-and-mobile-2.m-login__aside
+                    .m-stack.m-stack--hor.m-stack--desktop
+                        .m-stack__item.m-stack__item--fluid
+                            .m-login__wrapper
+                                .m-login__logo
+                                    a(href='#')
+                                        img(src='/assets/images/logo-1.png')
+                                .m-login__signin
+                                    .m-login__head
+                                        h3.m-login__title
+                                            | E-USO MANAGEMENT SYSTEM
+                                    form.m-login__form.m-form(action='')
+                                        .form-group.m-form__group
+                                            input.form-control.m-input(type='text', placeholder='Email', name='email', autocomplete='off')
+                                        .form-group.m-form__group
+                                            input.form-control.m-input.m-login__form-input--last(type='password', placeholder='Password', name='password')
+                                        .row.m-login__form-sub
+                                            .col.m--align-left
+                                                label.m-checkbox.m-checkbox--focus
+                                                    input(type='checkbox', name='remember')
+                                                    | 													Remember me
+                                                    span
+                                            .col.m--align-right
+                                                a#m_login_forget_password.m-link(href='javascript:;')
+                                                    | Forget Password ?
+                                    .m-login__form-action
+                                        button.btn.m-btn--pill.btn-outline-success.btn-lg.m-btn.m-btn--custom(onclick="location.href='http://euso.datasintesa.id/default/dist/beta/index.html'")
+                                            | Sign In
+                                .m-login__signup
+                                    .m-login__head
+                                        h3.m-login__title
+                                            | Sign Up
+                                        .m-login__desc
+                                            | Enter your details to create your account:
+                                    form.m-login__form.m-form(action='')
+                                        .form-group.m-form__group
+                                            input.form-control.m-input(type='text', placeholder='Fullname', name='fullname')
+                                        .form-group.m-form__group
+                                            input.form-control.m-input(type='text', placeholder='Email', name='email', autocomplete='off')
+                                        .form-group.m-form__group
+                                            input.form-control.m-input(type='password', placeholder='Password', name='password')
+                                        .form-group.m-form__group
+                                            input.form-control.m-input.m-login__form-input--last(type='password', placeholder='Confirm Password', name='rpassword')
+                                        .row.form-group.m-form__group.m-login__form-sub
+                                            .col.m--align-left
+                                                label.m-checkbox.m-checkbox--focus
+                                                    input(type='checkbox', name='agree')
+                                                    | 													I Agree the
+                                                    a.m-link.m-link--focus(href='#')
+                                                        | terms and conditions
+                                                    | 													.
+                                                    span
+                                                span.m-form__help
+                                        .m-login__form-action
+                                            button#m_login_signup_submit.btn.btn-focus.m-btn.m-btn--pill.m-btn--custom.m-btn--air
+                                                | Sign Up
+                                            button#m_login_signup_cancel.btn.btn-outline-focus.m-btn.m-btn--pill.m-btn--custom
+                                                | Cancel
+                                .m-login__forget-password
+                                    .m-login__head
+                                        h3.m-login__title
+                                            | Forgotten Password ?
+                                        .m-login__desc
+                                            | Enter your email to reset your password:
+                                    form.m-login__form.m-form(action='')
+                                        .form-group.m-form__group
+                                            input#m_email.form-control.m-input(type='text', placeholder='Email', name='email', autocomplete='off')
+                                        .m-login__form-action
+                                            button#m_login_forget_password_submit.btn.btn-focus.m-btn.m-btn--pill.m-btn--custom.m-btn--air
+                                                | Request
+                                            button#m_login_forget_password_cancel.btn.btn-outline-focus.m-btn.m-btn--pill.m-btn--custom
+                                                | Cancel
+                .m-grid__item.m-grid__item--fluid.m-grid.m-grid--center.m-grid--hor.m-grid__item--order-tablet-and-mobile-1.m-login__content(style='background-image: url(/assets/images/bg-2.jpg)')
+                    .m-grid__item.m-grid__item--middle
+                        h3.m-login__welcome
+                            | Selamat Datang di Sistem E-USO
+                        p.m-login__msg
+                            | Sistem Electronik Universal Service Obligation oleh BP3TI saat ini sedang dalam tahap pengembangan.
+        // end:: Page
+        // begin::Base Scripts
+        script(src='/assets/js/vendors.bundle.js', type='text/javascript')
+        script(src='/assets/js/scripts.bundle.js', type='text/javascript')
+        // end::Base Scripts
+        // begin::Page Snippets
+        // <script src="../../../assets/snippets/pages/user/login.js" type="text/javascript"></script>
+        // end::Page Snippets
+    // end::Body
